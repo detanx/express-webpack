@@ -1,0 +1,15 @@
+extends layout
+
+block con
+  link(rel='stylesheet', href='/stylesheets/cssReset.css')
+  link(rel='stylesheet', href='../stylesheets/page/index.css')
+block content
+  body
+    div.cover
+      p.login 登录
+      input(type='text',placeholder='用户名',class='username')
+      input(type='password',placeholder='密码',class='password')
+      button.submit 登录
+    script(src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js")
+    script(src="https://cdn.bootcss.com/layer/3.1.0/layer.js")
+    script(type="text/javascript",src='dist/index.js')

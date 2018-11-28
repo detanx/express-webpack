@@ -1,0 +1,19 @@
+extends ../layout
+
+block stylelink
+  link(rel='stylesheet', href='/stylesheets/cssReset.css')
+  link(rel='stylesheet', href='../stylesheets/page/login.css')
+block content
+  body
+    div.cover
+      a.out(href="index") X
+      p.login 登录
+      input(type='text',placeholder='用户名',class='username')
+      input(type='password',placeholder='密码',class='password')
+      button.submit 登录
+      div.bottom.clearfix
+        a.fl(href='forget') 忘记密码
+        a.fr(href='register') 注册
+    script(src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js")
+    script(src="https://cdn.bootcss.com/layer/3.1.0/layer.js")
+    script(type="text/javascript",src='dist/login.js')

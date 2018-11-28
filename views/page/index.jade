@@ -1,0 +1,21 @@
+extends ../layout
+
+block stylelink
+  link(rel='stylesheet', href='/stylesheets/cssReset.css')
+  link(rel='stylesheet', href='../stylesheets/page/index.css')
+block content
+  body
+    div.cover
+      div.header.clearfix
+        div.header_logo.fl
+        ul.header_user.clearfix.fr
+          li.fl
+            a(href="login") 登陆
+          li.fl
+            a(href="register") 注册
+        div.header_logined.fr
+          p.logined_p
+          button.logined_out 退出
+    script(src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js")
+    script(src="https://cdn.bootcss.com/layer/3.1.0/layer.js")
+    script(type="text/javascript",src='dist/index.js')

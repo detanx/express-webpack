@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+</head>
+
+<body>
+  response here: <p id="lblResponse">fill me in</p>
+  <button id="btn">熊是不是大傻逼？</button>
+  <script type="text/javascript">
+    $(document).ready(function() {
+    $("#btn").click(function(){
+      $.ajax({
+        url: 'http://127.0.0.1:3000/dynamic',
+        dataType: "jsonp",
+        data: {"email":"1286335864@qq.com"},
+        type: 'POST',
+        jsonpCallback: 'callback', // this is not relevant to the POST anymore
+        success: function (data) {
+          var ret = JSON.parse(data);
+          console.log(ret.msg);
+          console.log('Success: ');
+        },
+        error: function (xhr, status, error) {
+          console.log('Error: ' + error.message);
+          $('#lblResponse').html('Error connecting to the server.');
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

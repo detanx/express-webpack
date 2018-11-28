@@ -1,0 +1,22 @@
+extends ../layout
+
+block stylelink
+  link(rel='stylesheet', href='/stylesheets/cssReset.css')
+  link(rel='stylesheet', href='../stylesheets/page/register.css')
+block content
+  body
+    div.cover
+      a.out(href='index') X
+      p.login 注册
+      input(type='text',placeholder='用户名',class='username')
+      input(type='password',placeholder='密码',class='password')
+      input(type='password',placeholder='确认密码',class='password2')
+      input(type='email',placeholder='邮箱',class='email')
+      input(type='text',placeholder='验证码',class='verify')
+      button.getCode 验证码
+      button.submit 注册
+      div.bottom.clearfix
+        a.fr(href='login') 登录
+    script(src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js")
+    script(src="https://cdn.bootcss.com/layer/3.1.0/layer.js")
+    script(type="text/javascript",src='dist/register.js')
